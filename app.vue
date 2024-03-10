@@ -23,14 +23,14 @@ useHead({
 
 const title = '#TaskManager'
 const desc = computed(() => t('page.index.desc'))
-const image = '/main.webp'
+const image = '/favicon.ico'
 
 useSeoMeta({
   description: () => desc.value,
   ogTitle: title,
   ogDescription: () => desc.value,
   ogImage: image,
-  ogUrl: 'https://afteralls.netlify.app/',
+  ogUrl: 'https://afteralls-task-manager.netlify.app/',
   twitterTitle: title,
   twitterDescription: () => desc.value,
   twitterImage: image,
