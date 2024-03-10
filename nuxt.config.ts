@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Task manager',
       short_name: 'Task manager',
-      description: 'A small test application for creating tasks',
+      description: 'A small test application for creating and managing tasks',
       theme_color: '#FFFFFF',
       icons: [
         {
