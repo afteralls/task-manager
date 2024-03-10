@@ -4,7 +4,7 @@
 
   @media (max-width: $lg) {
     width: toRem(300);
-    transform: inherit;
+    transform: inherit !important;
   }
 
   @media (max-width: $zf) {
