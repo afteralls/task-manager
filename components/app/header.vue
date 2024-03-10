@@ -2,7 +2,7 @@
   <div class="header-wrapper">
     <USpace layout="container">
       <USpace display="row" pos="between" full class="header">
-        <ULink to="/" :title="$t('page.index.title')" :icon="ICON_HOME" mode="icon" />
+        <ULink to="/" :title="$t('page.index.short')" :icon="ICON_TASK" mode="index" />
         <AppSettings />
       </USpace>
     </USpace>
@@ -27,18 +27,6 @@
 
   @media (max-width: $sm) {
     height: var(--mob-header-height);
-  }
-}
-
-.vh {
-  height: toRem(20);
-  min-width: toRem(1);
-  background-color: var(--txt-m);
-}
-
-.hide {
-  @media (max-width: $lg) {
-    display: none !important;
   }
 }
 </style>

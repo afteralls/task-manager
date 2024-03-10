@@ -21,6 +21,8 @@ export default defineI18nLocale(() => {
       edit: 'Edit',
       delete: 'Delete',
       sure: 'Are you sure?',
+      author: 'Author',
+      authorName: 'Daniil Sukharnikov',
       pwa: {
         insTitle: "It's more convenient in the app!",
         insDesc: 'It weighs little and installation takes a couple of seconds',
@@ -50,8 +52,15 @@ export default defineI18nLocale(() => {
       },
       index: {
         welcome: 'Welcome to...',
+        short: 'Home',
         title: 'Task manager',
         desc: 'A small test application for creating and managing tasks'
+      },
+      about: {
+        title: 'About application',
+        short: 'About application',
+        app: 'Application',
+        gratitude: 'Made with ❤️ by Daniil Sukharnikov'
       }
     }
   }

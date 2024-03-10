@@ -11,12 +11,26 @@
       <USpace v-auto-animate display="col">
         <USpace display="row">
           <USpace mode="center" block="def" class="avatar">
-            <img src="" alt="" />
+            <img
+              src="https://avatars.githubusercontent.com/u/106645309?v=4"
+              :alt="$t('app.author')"
+            />
           </USpace>
-          <USpace display="col" gap="sm" pos="left">
+          <USpace display="col" class="info">
             <USpace display="col" gap="bit">
-              <UText type="span" text="..." />
-              <UText gray text="..." />
+              <UText type="span" :text="$t('app.authorName')" />
+              <UText gray :text="$t('app.author')" />
+            </USpace>
+            <USpace display="row">
+              <ULink
+                v-for="(link, idx) in links"
+                :key="idx"
+                :to="link.to"
+                :title="link.title"
+                global
+                :icon="link.icon"
+                mode="icon"
+              />
             </USpace>
           </USpace>
         </USpace>
@@ -131,6 +145,15 @@ const showSettings = ref(false)
 const { locale, locales, setLocale } = useI18n()
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
+type Link = { to: string; icon: string; title: string }
+
+const links: Link[] = [
+  { to: 'https://afteralls.netlify.app', icon: ICON_SITE, title: 'Website' },
+  { to: 'https://github.com/afteralls', icon: ICON_GITHUB, title: 'Github' },
+  { to: 'https://t.me/afterallspace', icon: ICON_TELEGRAM, title: 'Telegram' },
+  { to: 'mailto:afterallspace@gmail.com', icon: ICON_EMAIL, title: 'E-Mail' }
+]
+
 const localeConfig = [
   { code: 'en', icon: 'twemoji:flag-us-outlying-islands' },
   { code: 'ru', icon: 'twemoji:flag-russia' }
@@ -198,15 +221,7 @@ const themeConfig = [
   }
 }
 
-.image-option {
-  position: absolute;
-  right: toRem(-10);
-  top: toRem(-10);
-  background-color: var(--fg-m);
-  width: toRem(40);
-  min-width: toRem(40);
-  height: toRem(40);
-  border-radius: toRem(5);
-  border: toRem(1) solid var(--br);
+.info {
+  justify-content: space-around;
 }
 </style>

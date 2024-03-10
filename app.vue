@@ -13,10 +13,11 @@
 const { t } = useI18n()
 const i18nHead = useLocaleHead({ addSeoAttributes: true })
 const themeHandler = computed(() => (useColorMode().value === 'dark' ? '#0c0c0d' : '#ffffff'))
+const route = useRoute()
 
 useHead({
   htmlAttrs: { lang: () => i18nHead.value.htmlAttrs!.lang },
-  title: () => t(`page.title`),
+  title: () => t(`page.${route.name as string}.title`),
   meta: [{ name: 'theme-color', content: () => themeHandler.value }]
 })
 </script>

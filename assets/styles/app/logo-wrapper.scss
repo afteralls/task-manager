@@ -1,9 +1,11 @@
 .logo-wrapper {
   filter: drop-shadow(0 0 10rem var(--m));
   width: toRem(350);
+  transform: scale(1.3);
 
   @media (max-width: $lg) {
-    width: toRem(200);
+    width: toRem(300);
+    transform: inherit;
   }
 
   @media (max-width: $zf) {
