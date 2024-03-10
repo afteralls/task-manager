@@ -20,4 +20,20 @@ useHead({
   title: () => t(`page.${route.name as string}.title`),
   meta: [{ name: 'theme-color', content: () => themeHandler.value }]
 })
+
+const title = '#TaskManager'
+const desc = computed(() => t('page.index.desc'))
+const image = '/main.webp'
+
+useSeoMeta({
+  description: () => desc.value,
+  ogTitle: title,
+  ogDescription: () => desc.value,
+  ogImage: image,
+  ogUrl: 'https://afteralls.netlify.app/',
+  twitterTitle: title,
+  twitterDescription: () => desc.value,
+  twitterImage: image,
+  twitterCard: 'summary'
+})
 </script>
