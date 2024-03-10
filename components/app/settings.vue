@@ -54,7 +54,7 @@
         <USpace v-if="isMobile" display="col">
           <ULine mode="dashed" />
           <UToggle
-            v-model="$vibroIsActive.value"
+            v-model="store.vibroIsActive"
             :label="$t('app.settings.vibro')"
             :desc="$t('app.settings.vibroDesc')"
             name="vibro"
@@ -139,6 +139,7 @@
 
 <script setup lang="ts">
 const showSettings = ref(false)
+const store = useNotfStore()
 const { locale, locales, setLocale } = useI18n()
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 

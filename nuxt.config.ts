@@ -7,8 +7,12 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    '@pinia/nuxt'
   ],
+  pinia: {
+    storesDirs: ['./stores/**']
+  },
   nitro: {
     compressPublicAssets: true
   },

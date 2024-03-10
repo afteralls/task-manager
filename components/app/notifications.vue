@@ -1,13 +1,17 @@
 <template>
   <USpace mode="center" class="notifications">
     <Transition name="notf" mode="out-in">
-      <USpace v-if="$notf.value" display="row" gap="sm" class="notification">
+      <USpace v-if="store.notf" display="row" gap="sm" class="notification">
         <UIcon size="ui" name="mdi:bell-notification" />
-        <UText :text="$t($notf.value)" />
+        <UText :text="$t(store.notf)" />
       </USpace>
     </Transition>
   </USpace>
 </template>
+
+<script setup lang="ts">
+const store = useNotfStore()
+</script>
 
 <style scoped lang="scss">
 .notifications {

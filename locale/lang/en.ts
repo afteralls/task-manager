@@ -3,7 +3,7 @@ export default defineI18nLocale(() => {
     notf: {
       sWW: 'Something went wrong...',
       invalidData: 'You entered incorrect information',
-      alreadyExists: 'Such data already exists',
+      alreadyExists: 'Such a task already exists',
       updated: 'Data updated successfully',
       correct: 'Check that the entered data is correct'
     },
@@ -20,7 +20,9 @@ export default defineI18nLocale(() => {
       add: 'Add',
       edit: 'Edit',
       delete: 'Delete',
+      editTask: 'Edit task',
       sure: 'Are you sure?',
+      warning: 'This action cannot be undone!',
       author: 'Author',
       authorName: 'Daniil Sukharnikov',
       pwa: {
@@ -61,6 +63,13 @@ export default defineI18nLocale(() => {
         short: 'About application',
         app: 'Application',
         gratitude: 'Made with ❤️ by Daniil Sukharnikov'
+      },
+      editor: {
+        title: 'Editor',
+        desc: 'On this page you can moderate the list of notes, use the necessary interfaces to create, edit and delete data',
+        addTask: 'Add task',
+        list: 'List of tasks',
+        tip: 'Created tasks will be displayed here, try creating the first one'
       }
     }
   }

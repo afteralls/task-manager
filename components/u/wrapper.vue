@@ -12,9 +12,9 @@
       <slot name="option" />
     </USpace>
     <ULine :mode="mode" />
-    <USpace display="col" :style="padding ? `padding: var(--space)` : null">
+    <div :style="padding ? `padding: var(--space)` : null">
       <slot />
-    </USpace>
+    </div>
     <USpace v-if="slots.action" class="action" display="col"><slot name="action" /></USpace>
   </USpace>
 </template>

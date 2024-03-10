@@ -2,7 +2,7 @@
   <div class="header-wrapper">
     <USpace layout="container">
       <USpace display="row" pos="between" full class="header">
-        <ULink to="/" :title="$t('page.index.short')" :icon="ICON_TASK" mode="index" />
+        <ULink to="/" title="#TaskManager" :icon="ICON_TASK" mode="index" />
         <AppSettings />
       </USpace>
     </USpace>
