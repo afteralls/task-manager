@@ -44,10 +44,10 @@
             <UButton
               v-for="(localeItem, idx) in locales"
               :key="idx"
-              :title="(localeItem as LocaleObject).name!"
+              :title="localeItem.name!"
               :icon="localeConfig[idx].icon"
-              :active="(localeItem as LocaleObject).code === locale"
-              @trigger="setLocale((localeItem as LocaleObject).code)"
+              :active="localeItem.code === locale"
+              @trigger="setLocale(localeItem.code)"
             />
           </USpace>
         </USpace>
@@ -138,9 +138,6 @@
 </template>
 
 <script setup lang="ts">
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
-// import { useGetCompressedImage } from '~/composables/image'
-
 const showSettings = ref(false)
 const { locale, locales, setLocale } = useI18n()
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
