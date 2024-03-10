@@ -1,0 +1,12 @@
+.logo-wrapper {
+  filter: drop-shadow(0 0 10rem var(--m));
+  width: toRem(350);
+
+  @media (max-width: $lg) {
+    width: toRem(200);
+  }
+
+  @media (max-width: $zf) {
+    width: 100%;
+  }
+}
