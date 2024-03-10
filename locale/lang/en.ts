@@ -52,7 +52,7 @@ export default defineI18nLocale(() => {
       },
       index: {
         welcome: 'Welcome to...',
-        short: 'Home',
+        short: 'TM',
         title: 'Task manager',
         desc: 'A small test application for creating and managing tasks'
       },

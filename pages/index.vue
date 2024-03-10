@@ -12,7 +12,7 @@
           mode="hybrid"
         />
       </USpace>
-      <USpace mode="center" class="logo-wrapper">
+      <USpace mode="center" class="logo-wrapper" style="transform: scale(1.3)">
         <UIcon size="full" :name="ICON_TASK" />
       </USpace>
     </USpace>
